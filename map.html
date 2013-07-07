@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0px; padding: 0px }
+  #map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+    src="https://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  
+	var clientId = "441864779180426";
+	var clientSecret = "bf48b9db54e547f41692d6ebc2c0306e";
+
+	var faceGraphURL = "https://graph.facebook.com/";
+
+	var HTTP_Response_Holder = null ;  
+	var obj = null;
+	var map = null;
+	var access_token = null;
+
+
+	if (typeof window.ActiveXObject != 'undefined' ) 
+	{
+        	HTTP_Response_Holder = new ActiveXObject("Microsoft.XMLHTTP");
+          	HTTP_Response_Holder.onreadystatechange = process ;
+        }
+        else 
+	{
+        	HTTP_Response_Holder = new XMLHttpRequest();
+          	HTTP_Response_Holder.onload = process ;
+        }
+
+
+	function initialize() 
+	{
+
+
+    		var latlng = new google.maps.LatLng(-31.42258, -64.18825);
+
+    		var myOptions = { zoom: 18, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP };
+
+    		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		getAccessToken(); 
+
+	}
+
+	function getAccessToken ()
+	{
+		var queryString = "oauth/access_token?grant_type=client_credentials&client_id=" + clientId + "&client_secret=" + clientSecret;
+	
+
+		if (typeof window.ActiveXObject != 'undefined' ) 
+			HTTP_Response_Holder.onreadystatechange = processToken ;
+		else
+			HTTP_Response_Holder.onload = processToken ;
+
+		HTTP_Response_Holder.open( "GET", faceGraphURL + queryString, true);
+		HTTP_Response_Holder.send( null );
+
+	}
+
+
+	function processToken ()
+	{
+		if ( HTTP_Response_Holder.readyState != 4 ) return ;
+
+		var responseText = HTTP_Response_Holder.responseText ;         
+		//obj = eval ("(" + jsonText + ")");
+
+		access_token = responseText;
+
+		loadHTTPData();
+
+	}
+
+
+
+      	function loadHTTPData() 
+	{
+
+		var selectString = "SELECT name, description, page_id, website, location FROM page WHERE page_id IN (SELECT page_id FROM place WHERE distance(latitude, longitude, '-31.42238', '-64.18826') < 5000)";
+
+		var fqlString = "fql?q=" + selectString + "&" + access_token;
+
+		/*
+		"search?q=bar&type=place&center=-31.42241,-		64.18543&distance=5000&access_token=AAAGR36kzqYoBAOyEtqQ3zbqLwjAd7YZCnTJIdR8x5LtyHfddm0eQUZCCuNYbVyhNOhahaVeRe7WoRVLRZB4TdCpwZBkcucRnRRkHbpx2nXpJ3qR3k7Nv"
+		*/
+
+		
+		if (typeof window.ActiveXObject != 'undefined' ) 
+			HTTP_Response_Holder.onreadystatechange = process ;
+		else
+			HTTP_Response_Holder.onload = process ;
+
+        	HTTP_Response_Holder.open( "GET", faceGraphURL + fqlString , true );
+
+        	HTTP_Response_Holder.send( null );
+      	}
+  
+      	function process() 
+	{
+
+        	if ( HTTP_Response_Holder.readyState != 4 ) return ;
+
+		var jsonText = HTTP_Response_Holder.responseText ;         
+		obj = eval ("(" + jsonText + ")");
+
+	
+		if( obj != null)
+		{
+
+			//var infowindow = new google.maps.InfoWindow();
+
+			var marker, i;
+
+			for (i = 0; i < obj.data.length; i++) 
+			{  
+      				marker = new google.maps.Marker({ position: new google.maps.LatLng(obj.data[i].location.latitude, obj.data[i].location.longitude),
+        								map: map, title: obj.data[i].name });
+			}
+
+		}
+
+
+
+//    		var marker = new google.maps.Marker({ position: latlng, map: map, title:"Hello World!" });   
+/*
+      					google.maps.event.addListener(marker, 'click', (function(marker, i) { return function() { infowindow.setContent(locations[i][0]); 								infowindow.open(map, marker); } })(marker, i));
+					*/
+
+
+        	//document.getElementById("output").innerHTML = HTTP_Response_Holder.responseText ;         
+
+      	}              
+
+
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>

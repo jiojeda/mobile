@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>Posicionamiento con HTML 5, Javascript y Google Maps</title>
+	<meta charset="UTF-8" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css' />
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+	<style>
+ 
+	* { margin: 0; padding: 0; }
+	html { height: 100%; }
+	body { font-size: 16px; font-family: 'Open Sans', sans-serif; height: 100%; position: relative; }
+	header { background-color: rgba(0,0,0,.88); height: 85px; width: 100%; position: fixed; z-index: 99; box-shadow: 0px 2px 3px #333333; }
+ 
+	#mapa { position: absolute; background: transparent; height: 100%; width: 100%; top: 0; left: 0; right: 0; bottom: 0; }
+	</style>
+	<script type="text/javascript">
+
+		var count = 0;
+		var pin_count = 0;
+	
+		function initialize() {
+	 
+			function localizacion (position) {
+	 
+				var activeInfoWindow;
+				var centerMap = new google.maps.LatLng("-31.42343", "-64.18696");
+	 
+				var mapOptions = {
+					zoom: 16,
+					center: centerMap, //new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+					disableDefaultUI: true,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+	 
+				var map = new google.maps.Map(document.getElementById('mapa'), mapOptions);
+	
+	
+				$.ajax({
+					type: "GET",
+					url: "boliches_nva_cba.xml",
+					dataType: "xml",
+					success: function(xml) {
+						$(xml).find('Places').each(function(){
+	
+							count++;
+							pin_count ++;
+							if (pin_count == 6) {
+								pin_count = 1;
+							}
+							var name = $(this).find('Place_Name').text();
+							var address = $(this).find('Place_Address1').text();
+							var lat = $(this).find('Place_Position_Latitude').text();
+							var lng = $(this).find('Place_position_Longitude').text();
+	
+							var location = new google.maps.LatLng(lat, lng);
+							
+							var infowindow = new google.maps.InfoWindow({
+								map: map,
+								position: location,
+								content: name + '<br>' + address
+							});
+							
+							infowindow.close();
+							
+							var marker = new google.maps.Marker({
+								map:map,
+								animation: google.maps.Animation.DROP,
+								position: location,
+								clickable:true,
+								draggable:false,
+								icon:new google.maps.MarkerImage('images/pin'+ pin_count +'_mar1.png',
+												 new google.maps.Size(40,40),
+												 new google.maps.Point(1,1),
+												 new google.maps.Point(20, 20)),
+								title:name
+							});
+							
+							
+							
+	
+							google.maps.event.addListener(marker, 'click', function() {
+								if (activeInfoWindow != null) {
+									activeInfoWindow.close();
+								}
+								
+								infowindow.open(map, marker);
+								activeInfoWindow = infowindow;
+							});
+	
+							/*
+							{
+								position:new google.maps.LatLng(50.96809,4.684162),
+								clickable:true,
+								draggable:false,
+								icon:new google.maps.MarkerImage('images/pin5_Jul1.png',
+												 new google.maps.Size(40,40),
+												 new google.maps.Point(0,0),
+												 new google.maps.Point(23,17)),
+								map:subgurim_FSMap,
+								title:'Rock Werchter'
+							}
+							*/
+							//$('<div class="items" id="link_'+count+'"></div>').html('<span>'+name+'</span>').appendTo('#page-wrap');
+	
+							});
+	 
+						}
+				});
+	
+			}
+	 
+			function errores (error) {
+				alert('Ha ocurrido un error al obtener la información');
+			}
+	 
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(localizacion,errores);
+			} else {
+				alert("Tu navegador no soporta la 'Geolocalización'");
+			}
+	 
+		}
+	</script>
+</head>
+<body onload="initialize()">
+	<header>
+		<h1>Posicionamiento con HTML 5, Javascript y Google Maps</h1>
+	</header>
+	<div id="mapa"></div>
+	<!--<div id="page-wrap"></div>-->
+
+</body>
+</html>

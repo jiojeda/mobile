@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+                            html { height: 100% }
+                            body { height: 100%; margin: 0; padding: 0 }
+                            #map_canvas { height: 100% }
+        </style>        
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9zLwcRs23ZSSVw15aeV6gk54taQR6Qc8&sensor=false">
+        </script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./js/ui/jquery.ui.map.js"></script>
+        <script language="javascript" type="text/javascript">
+
+            var obj = null;
+            var map = null;
+
+            var HTTP_Response_Holder = null;
+            
+            var autorizeURL = "https://www.facebook.com/dialog/oauth?";
+            var accessTokenURL = "https://graph.facebook.com/oauth/access_token?";
+            var fqlURL = "https://graph.facebook.com/fql?";
+            //var redirect_URI = "http://localhost:9910/helloworld/testfql.html";
+            var redirect_URI = "http://localhost/mobile/testfql.html";
+            
+            var clientID = "219120008220447";
+            var secretClientID = "fb8bd03e056edf3a9a71ff24bd8b649a";
+
+            var codeUserAccess = null;
+
+            var qrStr = window.location.search;
+
+            function getToken() {
+
+                if (qrStr != "" && qrStr != null)
+                {
+                    var spQrStr = qrStr.substring(1);
+                    
+                    // splits each of pair
+                    var arr = spQrStr.split('&');
+                    
+                    for (var i=0;i<arr.length;i++)
+                    {
+                        // splits each of field-value pair
+                        var index = arr[i].indexOf('=');
+
+                        var key = arr[i].substring(0,index);
+                        var val = arr[i].substring(index+1);
+
+                        if (key == "code") {
+                            // save code access number
+                            codeUserAccess = val;
+                            break;
+                        }
+                    }
+
+                    if (codeUserAccess != null)
+                    {
+                        //document.write(codeUserAccess);
+
+                        var tokenParams = "client_id=" + clientID + "&redirect_uri=" + redirect_URI + "&client_secret=" + secretClientID + "&code=" + codeUserAccess
+
+                        if (typeof window.ActiveXObject != 'undefined') {
+                            HTTP_Response_Holder = new ActiveXObject("Microsoft.XMLHTTP");
+                            HTTP_Response_Holder.onreadystatechange = process;
+                        }
+                        else {
+                            HTTP_Response_Holder = new XMLHttpRequest();
+                            HTTP_Response_Holder.onload = process;
+                        }
+
+                        HTTP_Response_Holder.open("GET", accessTokenURL + tokenParams, true);
+                        HTTP_Response_Holder.send(null);
+
+                    }
+
+                }
+            }
+            
+            function getAutorization() {
+
+                var autorizeParams = "client_id=" + clientID + "&redirect_uri=" + redirect_URI + "&scope=read_stream,user_checkins,friends_checkins,user_location,friends_location,manage_pages,publish_checkins,offline_access";
+
+                window.location.href = autorizeURL + autorizeParams;
+            
+            }
+
+
+            function process() {
+
+                if ( HTTP_Response_Holder.readyState != 4 ) return ;
+
+                var accessToken = null;
+                
+                var strResponse = HTTP_Response_Holder.responseText ;
+                var arrResponse = strResponse.split("&");
+
+
+                for (var i = 0; i < arrResponse.length; i++) {
+                    // splits each of field-value pair
+                    var index = arrResponse[i].indexOf('=');
+
+                    var key = arrResponse[i].substring(0, index);
+                    var val = arrResponse[i].substring(index + 1);
+
+                    if (key == "access_token") {
+                        // save code access number
+                        accessToken = val;
+                        break;
+                    }
+                }
+
+
+                //document.write("access token = " + accessToken);
+
+                loadPlacesData(accessToken);
+
+                //document.getElementById("output").innerHTML = HTTP_Response_Holder.responseText ;         
+
+            }
+
+            function loadPlacesData(paramAccessToken) {
+
+                var latlng = new google.maps.LatLng(-31.42258, -64.18825);
+                var myOptions = { zoom: 18, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP };
+                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+            /*
+                if (typeof window.ActiveXObject != 'undefined') 
+                {
+                    HTTP_Response_Holder = new ActiveXObject("Microsoft.XMLHTTP");
+                    HTTP_Response_Holder.onreadystatechange = process_places ;
+                }
+                else {
+                    HTTP_Response_Holder = new XMLHttpRequest();
+                    HTTP_Response_Holder.onload = process_places ;
+                }
+            */
+                //"https://graph.facebook.com/search?q=bar&type=place&center=-31.42241,-64.18543&distance=1000&access_token=AAAAAAITEghMBAMfNJ8HmtNrgbUHORBsPfNbz4fvURXIVm0i7M9JZBNN7zppyQ3MyU1GTWzbEwPpFd2ZByTEoU9nVXslzxiO5fjYTgPWZBZCFtXDZCP5nd"
+
+
+                var strQuery = "q=SELECT page_id, name,description,geometry,latitude,longitude,checkin_count,display_subtext, distance(latitude,longitude,'-31.42238','-64.18826') FROM place WHERE distance(latitude, longitude, '-31.42238', '-64.18826') < 1000 LIMIT 0, 50&access_token=" + paramAccessToken;
+                
+
+                //Set Url of JSON data from the facebook graph api. make sure callback is set with a '?' to overcome the cross domain problems with JSON
+                var url =  fqlURL + strQuery + "&callback=?";   // "http://graph.facebook.com/prettyklicks/feed?limit=5&callback=?";
+
+                $(document).ready(function() {
+                    //Use jQuery getJSON method to fetch the data from the url and then create our unordered list with the relevant data.
+                    $.getJSON(url, function (json) {
+                        /*
+                        var html = "<ul>";
+
+                        //loop through and within data array's retrieve the message variable.
+                        //XSS ATTACK FIX AS OF 6/1/12 PLEASE UPDATE TO THIS ASAP.
+                    
+                        $.each(json.data,function(i,fb){
+                        html += "<li>" + $('<div>').html(fb.longitude).text() + "</li>";
+                        });
+
+                        html += "</ul>";
+
+                        //A little animation once fetched
+                        $('.facebookfeed').animate({opacity:0}, 500, function(){
+                        $('.facebookfeed').html(html);
+                        });
+
+                        $('.facebookfeed').animate({ opacity: 1 }, 500);
+                        */
+
+                        $.each(json.data, function (i, m) {
+                            $('#map_canvas').gmap('addMarker', { 'position': new google.maps.LatLng(m.latitude, m.longitude), 'bounds': true }).click(function() {
+		                        $('#map_canvas').gmap('openInfoWindow', {'content': m.name}, this);
+	                        });
+	                        $('#map_canvas').gmap('option', 'zoom', 18);
+                        });
+
+
+                    });
+
+                }); 
+
+                
+
+                
+
+
+                /*
+                HTTP_Response_Holder.open( "GET", fqlURL + strQuery , true );
+                HTTP_Response_Holder.send(null);
+                */
+            }
+
+            function process_places() {
+
+                if (HTTP_Response_Holder.readyState != 4) return;
+
+                var jsonText = HTTP_Response_Holder.responseText ;         
+                var obj = eval ("(" + jsonText + ")");
+                
+                if (obj != null) {
+
+                    //var infowindow = new google.maps.InfoWindow();
+
+                    for (i = 0; i < obj.data.length; i++) {
+
+                        var latlng = new google.maps.LatLng(obj.data[i].latitude, obj.data[i].longitude);
+
+                        var marker = new google.maps.Marker({ position: latlng, map: map, title: obj.data[i].name });
+                    }
+
+                }
+                
+
+                //document.write(jsonText);
+
+            }
+
+
+        </script>  
+        <title>
+        </title>
+    </head>
+    <body>
+        <div id="map_canvas" style="width:100%; height:100%"></div>
+        <script language="javascript" type="text/javascript">
+            
+            var qrStr = window.location.search;
+
+            if (qrStr == "" || qrStr == null)
+                getAutorization();   
+            else
+                getToken();
+        </script>
+
+    </body>
+  </html> 

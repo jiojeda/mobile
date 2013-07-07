@@ -1,0 +1,528 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Places>
+    <Place_Name>ALQUIMIA</Place_Name>
+    <Place_Address1>Rondeau 271</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42305</Place_Position_Latitude>
+    <Place_position_Longitude>-64.183205</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ANINA NOSEI DISCO</Place_Name>
+    <Place_Address1>Ambrosio Olmos 530</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4292993</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1862499</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ANINSTON</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 83</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4268</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187819</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>AQUA DISCO</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;ana 52</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4270743</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1873559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>AVENUE DISCO</Place_Name>
+    <Place_Address1>Chacabuco 626</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4247421</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1832978</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>BONUS DISCO</Place_Name>
+    <Place_Address1>Bv. Illia 34</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4208275</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1858382</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CAYO MAKENSSY</Place_Name>
+    <Place_Address1>Independecia 1051</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42799</Place_Position_Latitude>
+    <Place_position_Longitude>-64.189149</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CHAO DISCO</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 44</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4268</Place_Position_Latitude>
+    <Place_position_Longitude>-64.188205</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CHECK IN</Place_Name>
+    <Place_Address1>Ituzaingo 745 (Ex Chacra)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42567</Place_Position_Latitude>
+    <Place_position_Longitude>-64.185308</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CITY FESTIVAL</Place_Name>
+    <Place_Address1>Av. Velez Sarsfield 361 (2do.Nivel) PATIO OLMOS</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4194683</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1887971</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CLUB BUENOS AIRES</Place_Name>
+    <Place_Address1>Buenos Aires 543</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4229307</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1856288</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CLUB LABOOM</Place_Name>
+    <Place_Address1>Av. Poetas Lugones 52</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4251488</Place_Position_Latitude>
+    <Place_position_Longitude>-64.177664</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CLUB LOCO</Place_Name>
+    <Place_Address1>Bv. Illia 34</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4208275</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1858382</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CONSECUENCIA</Place_Name>
+    <Place_Address1>Ituzaingo 521</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4231268</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1842112</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>COOL HOUSE CLUB</Place_Name>
+    <Place_Address1>Marcelo T. de Alvear 635</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220829</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1923304</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CRISTOFER BOLICHE</Place_Name>
+    <Place_Address1>Buenos Aires 464</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220013</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1852933</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CRUZ DIABLO</Place_Name>
+    <Place_Address1>Achaval Rodriguez 152</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4248411</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1902933</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>CUERNAVACA</Place_Name>
+    <Place_Address1>Bv. Illia 34</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42093</Place_Position_Latitude>
+    <Place_position_Longitude>-64.185905</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>DE LUNES A LUNES</Place_Name>
+    <Place_Address1>Bv. Chacabuco 563</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42384</Place_Position_Latitude>
+    <Place_position_Longitude>-64.182755</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>DECK AFRICA (DECK DISCO LOUNGE)</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 67</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42673</Place_Position_Latitude>
+    <Place_position_Longitude>-64.188119</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>DIAVOLO DANCE</Place_Name>
+    <Place_Address1>Bv. Illia 443</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4225014</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1802624</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>DOMINO RESTO LOUNGE</Place_Name>
+    <Place_Address1>Buenos Aires 864</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4266551</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1872226</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>EL SOL</Place_Name>
+    <Place_Address1>San Lorenzo 169</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42371</Place_Position_Latitude>
+    <Place_position_Longitude>-64.18524</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ELECTROMOON SOUND CLUB</Place_Name>
+    <Place_Address1>Ituzaingo 439</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4221206</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1838288</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>EVORA</Place_Name>
+    <Place_Address1>Ituzaingo 439</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4221206</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1838288</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>FEEL CLUB</Place_Name>
+    <Place_Address1>Buenos Aires 864 (Domino)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4266551</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1872226</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>FLY CITY</Place_Name>
+    <Place_Address1>Av. Hip&amp;oacute;lito Irigoyen 282</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.3989296</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1821289</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>GROOVE</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 86</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4270743</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1873559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>HI-FI</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 133</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.427184</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1869034</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>HIPOLYTO</Place_Name>
+    <Place_Address1>Av. Hipolito Yrigoyen 419</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4254973</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1865059</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>HUNO</Place_Name>
+    <Place_Address1>Buenos Aires 460</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.421955</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1852772</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>IRA</Place_Name>
+    <Place_Address1>Av. Hipolito Yrigoyen 282</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4234501</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1875647</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>KANDINSKY</Place_Name>
+    <Place_Address1>Buenos Aires 853</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4265402</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1871378</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>KIWI BAY</Place_Name>
+    <Place_Address1>Derqui 18</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42582</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187669</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LA DIVINA</Place_Name>
+    <Place_Address1>San Lorenzo 425</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.424902</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1816304</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LA ESTANCIA</Place_Name>
+    <Place_Address1>Poeta Lugones 52</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4251488</Place_Position_Latitude>
+    <Place_position_Longitude>-64.177664</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LA OSA</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 152</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4272915</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1866696</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LAS VEGAS MADEROS</Place_Name>
+    <Place_Address1>Ituzaingo y Derqui</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4262</Place_Position_Latitude>
+    <Place_position_Longitude>-64.185691</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LE BLEU</Place_Name>
+    <Place_Address1>San Lorenzo 425</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.424902</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1816304</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LEVEL ONE</Place_Name>
+    <Place_Address1>Independencia 516</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42241</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187175</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LIMITE</Place_Name>
+    <Place_Address1>Av. Chacabuco 563</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4239365</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1832273</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LINE LOUNGE CLUB</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 86</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4270743</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1873559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>LUNA ELECTRONICA</Place_Name>
+    <Place_Address1>Av. Chacabuco 554</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4239048</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1829359</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MALLCLUB</Place_Name>
+    <Place_Address1>Rondeau 33</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4221149</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1863568</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MARIACHI DISCO</Place_Name>
+    <Place_Address1>Av. Hipolito Irigoyen 430</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.3989296</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1821289</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MIIX CLUB (EX SOCIALL)</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 115</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42710</Place_Position_Latitude>
+    <Place_position_Longitude>-64.186875</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MISTAKE</Place_Name>
+    <Place_Address1>Rondeau 38</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4224301</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1854112</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MITRE</Place_Name>
+    <Place_Address1>Marcelo T. de Alvear 635</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220829</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1923304</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MOOG CLUB</Place_Name>
+    <Place_Address1>Independencia 769</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42506</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187969</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>MUI DISCO PUB</Place_Name>
+    <Place_Address1>Buenos Aires 489 (Ex Maria Reina)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4222906</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1853559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>NAPOLEON</Place_Name>
+    <Place_Address1>Bv. Illia 34 (Ex Rinza)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4208275</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1858382</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>NIX</Place_Name>
+    <Place_Address1>Ituzaingo 521</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4231268</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1842112</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>NOSEDICE DISCO</Place_Name>
+    <Place_Address1>Buenos Aires 464</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220013</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1852933</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>NUMBERS BAR</Place_Name>
+    <Place_Address1>Av.Hipolito Irigoyen al 282</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.3989296</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1821289</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>NUVVIA</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 80</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42703</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187905</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>OBRAS DISCO</Place_Name>
+    <Place_Address1>Bv. Illia 220 (Ex Boliche Illia 218)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.421496</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1833164</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>OLIVIA</Place_Name>
+    <Place_Address1>Rondeau 271</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.423102</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1832189</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ONIX</Place_Name>
+    <Place_Address1>Buenos Aires 464</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220013</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1852933</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>PARADISE CLUB</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 83</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4268</Place_Position_Latitude>
+    <Place_position_Longitude>-64.187819</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>PARIS</Place_Name>
+    <Place_Address1>Buenos Aires 853</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42611</Place_Position_Latitude>
+    <Place_position_Longitude>-64.188377</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>PE&amp;Ntilde;ON DEL AGUILA (IRISH PUB)</Place_Name>
+    <Place_Address1>Independencia 847</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42603</Place_Position_Latitude>
+    <Place_position_Longitude>-64.188377</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>POBRE DIABLO</Place_Name>
+    <Place_Address1>Marcelo T. de Alvear 647</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4221893</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1924731</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>PULSE</Place_Name>
+    <Place_Address1>Laprida 175 (Esq. Velez Sarsfield)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4236257</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1901321</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>RAZA (EX RIVERAS PUB)</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 52</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4270743</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1873559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>RINZA CLUB</Place_Name>
+    <Place_Address1>Independencia 585</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4229779</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1872409</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>RUMMI MULTIESPACIO</Place_Name>
+    <Place_Address1>Av. Chacabuco 554</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4239048</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1829359</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>SOCIALL</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 115</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.42710</Place_Position_Latitude>
+    <Place_position_Longitude>-64.186875</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>TEQUILA</Place_Name>
+    <Place_Address1>Marcelo T. de Alvear 635 (Ex MITRE)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220829</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1923304</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>UK</Place_Name>
+    <Place_Address1>Independencia 585 (Esq. San Lorenzo)</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4229779</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1872409</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>UNICO BAR &amp; GOURMET</Place_Name>
+    <Place_Address1>Independencia 1074</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4279</Place_Position_Latitude>
+    <Place_position_Longitude>-64.189428</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>VELVET DISCO</Place_Name>
+    <Place_Address1>Chacabuco 554</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4239048</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1829359</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>VICENTA</Place_Name>
+    <Place_Address1>Larra&amp;ntilde;aga 86</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4270743</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1873559</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ZAR DISCO</Place_Name>
+    <Place_Address1>Av. Chacabuco 554</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4239048</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1829359</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ZERO MULTIESPACIO</Place_Name>
+    <Place_Address1>Buenos Aires 464</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4220013</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1852933</Place_position_Longitude>
+  </Places>
+  <Places>
+    <Place_Name>ZOOM URBAN CLUB</Place_Name>
+    <Place_Address1>Achaval Rodriguez 150</Place_Address1>
+    <Place_Address2 />
+    <Place_Position_Latitude>-31.4248503</Place_Position_Latitude>
+    <Place_position_Longitude>-64.1902654</Place_position_Longitude>
+  </Places>
+</DocumentElement>
